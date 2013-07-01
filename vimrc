@@ -35,6 +35,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'vim-scripts/peaksea'
+Bundle 'altercation/vim-colors-solarized'
 Bundle 'scrooloose/nerdtree'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
@@ -169,7 +170,9 @@ set tm=500
 
 syntax enable
 set background=dark
-colorscheme peaksea
+let g:solarized_termcolors=256
+let g:solarized_contrast='high'
+colorscheme solarized
 
 " Set extra options when running in GUI mode
 if has("gui_running")
