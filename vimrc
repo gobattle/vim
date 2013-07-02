@@ -42,6 +42,7 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'sprsquish/thrift.vim'
+Bundle 'vim-scripts/nginx.vim'
 " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -417,3 +418,7 @@ let g:syntastic_auto_jump=1
 
 " Thrift
     autocmd BufRead,BufNewFile *.thrift set filetype=thrift
+
+" Nginx
+    autocmd BufRead,BufNewFile /etc/nginx/* set filetype=nginx
+    autocmd BufRead,BufNewFile /usr/local/etc/nginx/* set filetype=nginx
