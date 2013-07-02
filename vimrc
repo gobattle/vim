@@ -41,6 +41,7 @@ Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
+Bundle 'sprsquish/thrift.vim'
 " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -388,3 +389,31 @@ let NERDTreeMouseMode=2
 let NERDTreeShowHidden=1
 let NERDTreeKeepTreeInNewTab=1
 let g:nerdtree_tabs_open_on_gui_startup=0
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Syntastic
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:syntastic_check_on_open=1
+let g:syntastic_auto_jump=1
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Languages
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Indent Fixes
+    autocmd FileType css,less,javascript,php,puppet,yaml set shiftwidth=2
+    autocmd FileType css,less,javascript,php,puppet,yaml set tabstop=2
+    autocmd FileType css,less,javascript,php,puppet,yaml set softtabstop=2
+
+" Python
+    " Highlight 80 column
+    autocmd FileType python set cc=80
+
+" PHP
+    " Highlight 1230 column
+    autocmd FileType python set cc=120
+
+" Less
+    autocmd BufRead,BufNewFile *.less set filetype=less
+
+" Thrift
+    autocmd BufRead,BufNewFile *.thrift set filetype=thrift
