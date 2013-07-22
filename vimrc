@@ -43,6 +43,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'scrooloose/syntastic'
 Bundle 'sprsquish/thrift.vim'
 Bundle 'vim-scripts/nginx.vim'
+Bundle 'Glench/Vim-Jinja2-Syntax'
 " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -219,8 +220,6 @@ set smarttab
 " 1 tab == 4 spaces
 set shiftwidth=4
 set tabstop=4
-
-" whis whis whis thid this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this this
 
 " Linebreak on 500 characters
 " set lbr
@@ -400,10 +399,11 @@ let g:syntastic_auto_jump=1
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Languages
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+    autocmd BufRead,BufNewFile *.twig set filetype=jinja
 " Indent Fixes
-    autocmd FileType css,less,javascript,php,puppet,yaml set shiftwidth=2
-    autocmd FileType css,less,javascript,php,puppet,yaml set tabstop=2
-    autocmd FileType css,less,javascript,php,puppet,yaml set softtabstop=2
+    autocmd FileType css,less,javascript,puppet,yaml set shiftwidth=2
+    autocmd FileType css,less,javascript,puppet,yaml set tabstop=2
+    autocmd FileType css,less,javascript,puppet,yaml set softtabstop=2
 
 " Python
     " Highlight 80 column
