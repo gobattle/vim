@@ -410,8 +410,11 @@ let g:syntastic_auto_jump=1
     autocmd FileType python set cc=80
 
 " PHP
-    " Highlight 1230 column
-    autocmd FileType python set cc=120
+    " Highlight 120 column
+    autocmd FileType php set cc=120
+
+" remove trailing whitespace when saving
+    autocmd BufWritePre *.py,*.php :%s/\s\+$//e
 
 " Less
     autocmd BufRead,BufNewFile *.less set filetype=less
