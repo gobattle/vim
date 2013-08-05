@@ -35,6 +35,7 @@ Bundle 'gmarik/vundle'
 "
 " original repos on github
 Bundle 'Glench/Vim-Jinja2-Syntax'
+Bundle 'Valloric/YouCompleteMe'
 Bundle 'altercation/vim-colors-solarized'
 Bundle 'kien/ctrlp.vim'
 Bundle 'scrooloose/nerdcommenter'
@@ -370,26 +371,35 @@ function! <SID>BufcloseCloseIt()
    endif
 endfunction
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => CtrlP
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
-nnoremap <CR> :CtrlPMRU<CR>
-let g:ctrlp_max_height = 10
-let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
+" CtrlP
+    let g:ctrlp_working_path_mode = 0
+    nnoremap <CR> :CtrlPMRU<CR>
+    let g:ctrlp_max_height = 10
+    let g:ctrlp_custom_ignore = 'node_modules\|^\.DS_Store\|^\.git\|^\.coffee'
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => NERDTree
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <C-n> :NERDTreeToggle<CR>
-let NERDTreeShowBookmarks=1
-let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
-let NERDTreeChDirMode=0
-let NERDTreeQuitOnOpen=1
-let NERDTreeMouseMode=2
-let NERDTreeShowHidden=1
-let NERDTreeKeepTreeInNewTab=1
-let g:nerdtree_tabs_open_on_gui_startup=0
+" NERDTree
+    map <C-n> :NERDTreeToggle<CR>
+    let NERDTreeShowBookmarks=1
+    let NERDTreeIgnore=['\.pyc', '\~$', '\.swo$', '\.swp$', '\.git', '\.hg', '\.svn', '\.bzr']
+    let NERDTreeChDirMode=0
+    let NERDTreeQuitOnOpen=1
+    let NERDTreeMouseMode=2
+    let NERDTreeShowHidden=1
+    let NERDTreeKeepTreeInNewTab=1
+    let g:nerdtree_tabs_open_on_gui_startup=0
+
+" OmniComplete
+    if has("autocmd") && exists("+omnifunc")
+        autocmd Filetype *
+            \if &omnifunc == "" |
+            \setlocal omnifunc=syntaxcomplete#Complete |
+            \endif
+    endif
+
+    hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
+    hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
+    hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Syntastic
