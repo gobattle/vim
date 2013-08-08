@@ -46,6 +46,7 @@ Bundle 'sprsquish/thrift.vim'
 Bundle 'tpope/vim-surround'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'vim-scripts/peaksea'
+Bundle 'vim-scripts/taglist.vim'
 " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -399,6 +400,9 @@ endfunction
     hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
     hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
     hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
+
+" Taglist
+    nnoremap <F8> :TlistToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
