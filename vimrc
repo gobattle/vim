@@ -46,9 +46,9 @@ Bundle 'sprsquish/thrift.vim'
 Bundle 'hynek/vim-python-pep8-indent'
 Bundle 'vim-scripts/nginx.vim'
 Bundle 'vim-scripts/peaksea'
-Bundle 'vim-scripts/taglist.vim'
 Bundle 'tpope/vim-markdown'
 Bundle 'tpope/vim-fugitive'
+" Bundle 'vim-scripts/taglist.vim'
 " vim-scripts repos
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
@@ -177,10 +177,10 @@ set tm=500
 " syntax enable
 
 syntax enable
-set background=dark
 let g:solarized_termcolors=256
 let g:solarized_contrast='high'
 colorscheme solarized
+set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
@@ -404,7 +404,7 @@ endfunction
     hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
 
 " Taglist
-    nnoremap <F8> :TlistToggle<CR>
+"    nnoremap <F8> :TlistToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
